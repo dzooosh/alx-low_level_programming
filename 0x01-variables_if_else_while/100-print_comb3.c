@@ -9,24 +9,28 @@
 
 int main(void)
 {
-	int n;
-	int s;
+	int n = 48;
 
-	for (n = 48; n <= 57; n++)
+	while (n < 58)
 	{
-		for (s = 48; s <= 57; s++)
+		int s = 48;
+
+		while (s < 58)
 		{
-			if (n != s)
+			if (n != s && n < s)
 			{
 				putchar(n);
 				putchar(s);
+				if (n == 56 && s == 57)
+				{
+					break;
+				}
+				putchar(',');
+				putchar(' ');
 			}
+			s++;
 		}
-		if (n != 57)
-		{
-			putchar(',');
-			putchar(' ');
-		}
+		n++;
 	}
 	putchar('\n');
 	return (0);
