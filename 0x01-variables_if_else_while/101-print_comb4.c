@@ -9,24 +9,29 @@
 
 int main(void)
 {
-        int i;
-        int c;
+	int i;
+	int c;
+	int s;
 
-        for (i = 48; i < 58; i++)
-        {
-                for (c = 48; c < 58; c++)
-                {
-                        if (i != c && i < c)
-                        {
-                                putchar(i);
-                                putchar(c);
-                                if (i == 56 && c == 57)
-                                        break;
-                                printf(",");
-                                printf(" ");
-                        }
-                }
-        }
-        putchar('\n');
-        return (0);
+	for (i = 48; i < 58; i++)
+	{
+		for (c = 48; c < 58; c++)
+		{
+			for (s = 48; s < 58; s++)
+			{
+				if (i != c && c != s && i < c && c < s)
+				{
+					putchar(i);
+					putchar(c);
+					putchar(s);
+					if (i == 55 && c == 56 && s == 57)
+						break;
+				printf(",");
+				printf(" ");
+				}
+			}
+		}
+	}
+	putchar('\n');
+	return (0);
 }
