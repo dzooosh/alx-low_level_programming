@@ -12,9 +12,9 @@ int main(void)
 	int n;
 	int s;
 
-	for (n = 0; n <= 9; n++)
+	for (n = 48; n <= 57; n++)
 	{
-		for (s = 1; s <= 9; s++)
+		for (s = 48; s <= 57; s++)
 		{
 			if (n != s)
 			{
@@ -22,7 +22,7 @@ int main(void)
 				putchar(s);
 			}
 		}
-		if (n != 9)
+		if (n != 57)
 		{
 			putchar(',');
 			putchar(' ');
