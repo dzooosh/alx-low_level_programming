@@ -10,13 +10,13 @@ void times_table(void)
 {
 	int i, j;
 
-	for (i = 48; i < 58; i++)
+	for (i = 0; i < 10; i++)
 	{
-		for (j = 48; j < 58; j++)
+		for (j = 0; j < 10; j++)
 		{
-			if (j == 57)
-				_putchar(i * j);
-			_putchar(i * j);
+			if (j == 9)
+				_putchar((i * j) + '0');
+			_putchar((i * j) + '0');
 			_putchar(',');
 			_putchar(' ');
 		}
