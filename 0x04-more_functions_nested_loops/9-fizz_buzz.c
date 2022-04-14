@@ -14,15 +14,17 @@ int main(void)
 	{
 		if ((n % 15) == 0)
 		{
-			printf("fizzbuzz ");
+			printf("FizzBuzz");
+			printf(" ");
 		}
 		else if ((n % 3) == 0)
 		{
-			printf("fizz ");
+			printf("Fizz");
+			printf(" ");
 		}
 		else if ((n % 5) == 0)
 		{
-			printf("buzz");
+			printf("Buzz");
 			if  (n != 100)
 				printf(" ");
 		}
