@@ -3,9 +3,9 @@
 /**
  * main - returns the program name
  * @argc: counts the argument
- * @**argv: pointer to array of strings
+ * @argv: pointer to array of strings
  *
- * return: 0 (success)
+ * Return: 0 (success)
  */
 
 int main(int argc, char **argv)
