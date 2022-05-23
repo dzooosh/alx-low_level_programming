@@ -14,18 +14,21 @@ char *str_concat(char *s1, char *s2)
 	unsigned int i, j, a;
 	char *pt;
 
-	if (*s1 == NULL || *s2 == NULL)
+	if (s1 == NULL || s2 == NULL)
 		return ("");
 	while (s1[i] != '\0')
 		i++;
 	while (s2[j] != '\0')
 		j++;
 	pt = malloc(sizeof(char) * (i + j + 1));
+
+	if (pt == NULL)
+		free(pt);
+		return (NULL);
 	for (a = 0; a < i; a++)
 		pt[a] = s1[a];
-	for (a = 0; a < (j + 1); a++)
+	for (a = 0; a < j; a++, i++)
 		pt[i] = s2[a];
-		i++;
-	if (pt == NULL)
-		return (NULL);
+
 	return (pt);
+}
