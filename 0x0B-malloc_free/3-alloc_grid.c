@@ -12,16 +12,31 @@
 int **alloc_grid(int width, int height)
 {
 	int **pt;
-	
-	if (width <= 0 || height <= 0)
+	int i, j;
+
+	if (width <= 0 || height <= 0) /* if paras are less than 1, return null */
 		return (NULL);
 
-	pt = malloc(sizeof(int) * width * height);
+	pt = malloc(sizeof(int *) * height);
 
-	if (pt == NULL)
+	if (pt == NULL) /* if pointer is null return null */
 	{
 		free(pt);
 		return (NULL);
 	}
+	for (i = 0; i < height; i++)
+	{
+		pt[i] = malloc(width * sizeof(int));
+		if (pt[i] == NULL)
+		{
+			for (i--; i >= 0; i--)
+				free(pt[i]);
+			free(pt);
+			return (NULL);
+		}
+	}
+	for (i = 0; i < height; i++)
+		for (j = 0; j < width; j++)
+			pt[i][j] = 0; /* initialization with 0 */
 	return (pt);
 }
