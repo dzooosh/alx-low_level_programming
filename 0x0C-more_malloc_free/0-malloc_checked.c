@@ -5,10 +5,9 @@
  * @b: bytes allocate
  * Return: pointer
  */
-
 void *malloc_checked(unsigned int b)
 {
-	void *pt;
+	void *ptr;
 
 	ptr = malloc(b);
 	if (ptr == NULL)
