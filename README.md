@@ -1,2 +1,1 @@
-## Working with C
-The C programming
+# C Programming Concepts
