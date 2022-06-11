@@ -5,29 +5,27 @@
  * of 3 or 5 below 1024
  * Return: Always 0 (Success)
  */
-#DEFINE T 3
-#DEFINE F 5
 
 int main(void)
 {
-	unsigned long int sum3, sum5, sum;
+	unsigned long int sum_3, sum_5, total;
 	int i;
 
-	sum3 = 0;
-	sum5 = 0;
-	sum = 0;
+	sum_3 = 0;
+	sum_5 = 0;
+	total = 0;
 
 	for (i = 0; i < 1024; ++i)
 	{
-		if ((i % T) == 0)
+		if ((i % 3) == 0)
 		{
-			sum3 = sum3 + i;
-		} else if ((i % F) == 0)
+			sum_3 = sum_3 + i;
+		} else if ((i % 5) == 0)
 		{
-			sum5 = sum5 + i;
+			sum_5 = sum_5 + i;
 		}
 	}
-	sum = sum3 + sum5;
-	printf("%lu\n", sum);
+	total = sum_3 + sum_5;
+	printf("%lu\n", total);
 	return (0);
 }
