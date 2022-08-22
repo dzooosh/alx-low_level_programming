@@ -9,7 +9,7 @@ int sum(...) ### NOT ALLOWED</li>
 </ul>
 
 # TASKS
-0. Beauty is variable, ugliness is constant
+### Beauty is variable, ugliness is constant
 mandatory
 Write a function that returns the sum of all its parameters.
 
@@ -18,7 +18,7 @@ If n == 0, return 0
 
 File: 0-sum_them_all.c
      
-1. To be is to be the value of a variable
+### To be is to be the value of a variable
 Write a function that prints numbers, followed by a new line.
 
 Prototype: void print_numbers(const char *separator, const unsigned int n, ...);
@@ -30,7 +30,7 @@ Print a new line at the end of your function
 
 File: 1-print_numbers.c
 
-2. One woman's constant is another woman's variable
+### One woman's constant is another woman's variable
 
 Write a function that prints strings, followed by a new line.
 
@@ -44,7 +44,7 @@ Print a new line at the end of your function
 
 File: 2-print_strings.c
 
-3. To be is a to be the value of a variable
+### To be is a to be the value of a variable
 
 Write a function that prints anything.
 
